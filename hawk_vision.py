@@ -12,7 +12,7 @@ from transformers import AutoProcessor, Idefics3ForConditionalGeneration
 from transformers.image_utils import load_image
 
 # Cell 2 — Load Model
-DEVICE = "cpu"
+DEVICE = "cuda"
 
 model_id = "HuggingFaceTB/SmolVLM-500M-Instruct"
 
@@ -20,7 +20,7 @@ processor = AutoProcessor.from_pretrained(model_id)
 
 model = Idefics3ForConditionalGeneration.from_pretrained(
     model_id,
-    torch_dtype=torch.float32
+    torch_dtype=torch.float16
     ,
     _attn_implementation="eager"
 ).to(DEVICE)
