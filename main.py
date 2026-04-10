@@ -1,7 +1,7 @@
 import numpy as np
 import cv2
 import time
-from hawk_vision import query_model
+from vlm import query_model
 from PIL import Image
 from summary import summarize
 

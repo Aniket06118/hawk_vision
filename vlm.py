@@ -61,8 +61,8 @@ def query_model(image_input, prompt_text="Describe this image", max_tokens=50):
 
     return processor.batch_decode(output_ids, skip_special_tokens=True)[0]
 
-response = query_model(
-    "https://cdn.britannica.com/61/93061-050-99147DCE/Statue-of-Liberty-Island-New-York-Bay.jpg",
-    "What do you see in the image ?")
+# response = query_model(
+#     "https://cdn.britannica.com/61/93061-050-99147DCE/Statue-of-Liberty-Island-New-York-Bay.jpg",
+#     "What do you see in the image ?")
 
-print(response)
+# print(response)
